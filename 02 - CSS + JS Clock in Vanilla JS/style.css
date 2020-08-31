@@ -20,11 +20,32 @@ body{
     height: 300px;
     border: 10px solid rgb(255, 255, 255);
     border-radius: 50%;
-}
-.circle{
     margin:0 auto ;
     position: relative;
 }
+.digit{
+    --rotation: 0;
+    position: absolute;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transform: rotate(var(--rotation));
+}
+.one{--rotation : 30deg;}
+.two{--rotation : 60deg;}
+.three{--rotation : 90deg;}
+.four{--rotation : 120deg;}
+.five{--rotation : 150deg;}
+.six{--rotation : 180deg;}
+.seven{--rotation : 210deg;}
+.eight{--rotation : 240deg;}
+.nine{--rotation : 270deg;}
+.ten{--rotation : 300deg;}
+.eleven{--rotation : 330deg;}
+
 .center{
     position: absolute;
     background: black;
@@ -49,7 +70,7 @@ body{
 }
 .minutes-hand{
     height: 6px;
-    width: 45%;
+    width: 40%;
 }
 .seconds-hand{
     height: 2px;

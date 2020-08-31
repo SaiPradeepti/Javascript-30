@@ -4,7 +4,7 @@ function setTime() {
     const hours = date.getHours();
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
-
+    console.log(hours, minutes);
 
     let hourdeg;
     if (hours <= 12) {
@@ -17,10 +17,10 @@ function setTime() {
     hoursHand.style.transform = `rotate(${hourdeg}deg)`;
 
 
-    const minutedeg = (360 / 60) * (minutes - 15);
+    const minutedeg = ((360 / 60) * (minutes - 15)) + 30 / (minutes - 15);
     const minutesHand = document.querySelector('.minutes-hand');
     minutesHand.style.transform = `rotate(${minutedeg}deg)`;
-
+    console.log(minutedeg);
 
     const seconddeg = (360 / 60) * (seconds - 15);
     const secondsHand = document.querySelector('.seconds-hand');
