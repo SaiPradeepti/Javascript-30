@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+}
+.wrapper{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+.wrapper .clock{
+    width: 100%;
+}
+.circle{
+    width: 300px;
+    height: 300px;
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    margin:0 auto ;
+    position: relative;
+}
+.digit{
+    --rotation: 0;
+    position: absolute;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transform: rotate(var(--rotation));
+}
+.one{--rotation : 30deg;}
+.two{--rotation : 60deg;}
+.three{--rotation : 90deg;}
+.four{--rotation : 120deg;}
+.five{--rotation : 150deg;}
+.six{--rotation : 180deg;}
+.seven{--rotation : 210deg;}
+.eight{--rotation : 240deg;}
+.nine{--rotation : 270deg;}
+.ten{--rotation : 300deg;}
+.eleven{--rotation : 330deg;}
+
+.center{
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.hand{
+    position: absolute;
+    background: black;
+    top: 50%;
+    left: 50%;
+    transform: rotate(0deg);
+    transform-origin: center left;
+}
+.hours-hand{
+    height: 6px;
+    width: 30%;
+}
+.minutes-hand{
+    height: 6px;
+    width: 40%;
+}
+.seconds-hand{
+    height: 2px;
+    width: 45%;
+}
