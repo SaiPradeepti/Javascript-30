@@ -5,9 +5,12 @@ const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
 // Validate email input value
-const isValidEmail = (emailValue) => {
+const checkEmail = (input) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(emailValue).toLowerCase());
+    if(re.test(input.value.trim()))
+        showSuccess(input)
+    else
+        showError(input,'Email is not valid')
 }
     
 
@@ -33,16 +36,38 @@ const checkRequired = (inputArr) => {
     inputArr.forEach((item) => {
         if(item.value.trim() === '')
             showError(item,`Enter ${item.id}`);
-        else if(item.id === 'email' && !isValidEmail(item.value))
-            showError(item,'Enter valid email')
         else
             showSuccess(item)        
     });
 }
+
+// Check length
+const checkLength = (input,min,max) => {
+    if(input.value.length < min)
+        showError(input,`${input.id} must be atleast ${min} characters`)
+    else if(input.value.length > max)
+        showError(input,`${input.id} must be less than ${max} characters`)
+    else
+        showSuccess(input);
+}
+
+
+// Check password match
+const checkPasswordsMatch = (password,password2) => {
+    if(password.value !== password2.value)
+        showError(password2,'Passwords do not match');
+}
+
+
 
 // Event Listeners
 // Validate form input values on form submit
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     checkRequired([username,email,password,password2]);
+    checkLength(username,3,15);
+    checkLength(password,6,25);
+    checkLength(password2,6,25);
+    checkEmail(email);
+    checkPasswordsMatch(password,password2);
 })
