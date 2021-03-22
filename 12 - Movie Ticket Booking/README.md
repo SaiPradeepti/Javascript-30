@@ -8,8 +8,8 @@
 
 ![](./img/Capture.PNG)
 
-### Link
+### Links
 
-- Live Site URL: [Click Here]()
+- Live Site URL: [Click Here](){:target="\_blank"}
 
-- [Design inspiration](https://dribbble.com/shots/4672745-Movie-Booking-App/attachments/4672745-Movie-Booking-App?mode=media)
+- [Design inspiration](https://dribbble.com/shots/4672745-Movie-Booking-App/attachments/4672745-Movie-Booking-App?mode=media){:target="\_blank"}
