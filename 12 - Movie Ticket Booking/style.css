@@ -156,7 +156,7 @@ select {
   border-radius: 30px;
   background: var(--secondary-blue);
   color: var(--primary-light);
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: 2px;
   cursor: pointer;
   outline: none;

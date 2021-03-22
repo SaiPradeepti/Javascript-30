@@ -2,7 +2,7 @@ const seatArrangement = document.querySelector('.seat__arrangement');
 const seatCount = document.querySelector('.seat__count');
 const totalCost = document.querySelector('.total__cost');
 const select = document.querySelector('select');
-let seatCost = document.querySelector('select').value;
+let seatCost = select.value;
 let count;
 
 // Updates Booking Details
