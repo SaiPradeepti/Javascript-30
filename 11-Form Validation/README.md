@@ -6,7 +6,7 @@
 
 ### Desktop View
 
-![](./images/CaptureDesktopView.PNG)
+![](./img/Capture.PNG)
 
 ### Link
 
