@@ -10,6 +10,6 @@
 
 ### Links
 
-- Live Site URL: [Click Here](){:target="\_blank"}
+- Live Site URL: [Click Here]()
 
-- [Design inspiration](https://dribbble.com/shots/4672745-Movie-Booking-App/attachments/4672745-Movie-Booking-App?mode=media){:target="\_blank"}
+- [Design inspiration](https://dribbble.com/shots/4672745-Movie-Booking-App/attachments/4672745-Movie-Booking-App?mode=media)
