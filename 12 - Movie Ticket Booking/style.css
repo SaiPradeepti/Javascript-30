@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+:root {
+  --primary-light: #fff;
+  --primary-blue: #1a1f32;
+  --secondary-blue: #00adef;
+  --secondary-gray: #85878f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--primary-blue);
+  color: var(--primary-light);
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  perspective: 1000px;
+}
+
+.movie-ticket {
+  display: flex;
+  gap: 2rem;
+  align-items: baseline;
+}
+
+select {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--primary-light);
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  appearance: none;
+  border: none;
+}
+
+.seat__availability {
+  display: flex;
+  /* border: 1px solid white; */
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.seat__info {
+  display: flex;
+  gap: 1rem;
+}
+
+.seat {
+  border: 2px solid var(--secondary-blue);
+  border-radius: 5px;
+  width: 1.2rem;
+  height: 100%;
+}
+
+.seat-taken {
+  background: var(--secondary-blue);
+}
+
+.seat-selected {
+  border: 2px solid var(--primary-light);
+  background: var(--primary-light);
+}
+
+.screen {
+  width: 65%;
+  height: 5rem;
+  background: var(--secondary-blue);
+  margin: 2rem auto;
+  transform: rotateX(-45deg);
+  box-shadow: 0px 6px 20px var(--secondary-blue);
+}

@@ -10,4 +10,4 @@
 
 ### Link
 
-- Live Site URL: [Click Here](https://form-validation-vanilla-js.netlify.app/)S
+- Live Site URL: [Click Here](https://form-validation-vanilla-js.netlify.app/)
