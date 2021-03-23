@@ -32,3 +32,8 @@
 - CSS custom properties
 - Flexbox
 - CSS Grid
+
+### Features
+
+- The app restores seats selected using local storage.
+- The number of selected seats and the total price is calculated and displayed.
