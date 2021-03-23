@@ -20,7 +20,7 @@
 
 ### Links
 
-- Live Site URL: [Click Here]()
+- Live Site URL: [Click Here](https://movie-ticket-booking-12.netlify.app/)
 
 - [Design inspiration](https://dribbble.com/shots/4672745-Movie-Booking-App/attachments/4672745-Movie-Booking-App?mode=media)
 
