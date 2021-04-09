@@ -1,0 +1,113 @@
+@import "./config";
+
+body {
+  height: 100vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1542435503-956c469947f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80")
+      center center no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.container {
+  z-index: 10;
+
+  #{&}__overlay {
+    z-index: -1;
+    position: fixed;
+    background: $clr-grey;
+    top: 0;
+    left: 55%;
+    transform: rotate(15deg) translateX(0%);
+    height: 150%;
+    width: 150%;
+  }
+}
+
+.review {
+  height: 50vh;
+  width: 40vw;
+
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .image__container {
+    position: absolute;
+    top: 20%;
+    right: 27%;
+    height: 300px;
+    width: 300px;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      border-right: 20px solid $clr-light-grey;
+    }
+  }
+}
+
+.reviewer {
+  transform: translateX(-50%);
+  padding: 2rem;
+  color: $clr-white;
+  border-radius: 10px;
+  font-size: 2rem;
+
+  #{&}__name {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: $regular-fontWeight;
+  }
+  #{&}__title {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: $light-fontWeight;
+  }
+}
+
+.review__quote {
+  .quote-left {
+    text-align: left;
+  }
+  .quote-right {
+    text-align: right;
+  }
+
+  .reviewer__quote {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: $thin-fontWeight;
+  }
+}
+
+.btn {
+  position: absolute;
+  border: none;
+  background: none;
+  color: $clr-white;
+  font-size: larger;
+  cursor: pointer;
+  font-weight: 100;
+  top: 70%;
+  outline: none;
+}
+
+.prev__btn {
+  @extend .btn;
+  left: 5%;
+}
+.next__btn {
+  @extend .btn;
+  right: 10%;
+}
