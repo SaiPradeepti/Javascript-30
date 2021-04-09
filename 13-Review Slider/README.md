@@ -1,6 +1,6 @@
 # Review Slider
 
-- [Live Site]()
+- [Live Site](https://review-slider-saipradeepti.netlify.app/)
 
 ## Built Using
 
