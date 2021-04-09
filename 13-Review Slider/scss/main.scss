@@ -12,6 +12,11 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 0;
+
+  @include medium-screen {
+    align-items: flex-end;
+    padding-bottom: 3rem;
+  }
 }
 
 .container {
@@ -30,14 +35,15 @@ body {
 }
 
 .review {
+  // border: 1px solid red;
   height: 50vh;
   width: 40vw;
-
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   .image__container {
     position: absolute;
     top: 20%;
@@ -52,6 +58,32 @@ body {
       border-radius: 50%;
       border-right: 20px solid $clr-light-grey;
     }
+
+    @include large-screen {
+      height: 250px;
+      width: 250px;
+      right: 15%;
+    }
+
+    @include medium-screen {
+      height: 200px;
+      width: 200px;
+      top: 10%;
+      left: 40%;
+    }
+
+    @include small-screen {
+      left: 28%;
+    }
+  }
+
+  @include large-screen {
+    height: 50vh;
+    width: 50vw;
+  }
+  @include medium-screen {
+    height: 50vh;
+    width: 400px;
   }
 }
 
@@ -67,12 +99,36 @@ body {
     font-size: 2rem;
     text-transform: capitalize;
     font-weight: $regular-fontWeight;
+
+    @include medium-screen {
+      font-size: 1.5rem;
+    }
   }
   #{&}__title {
     text-align: center;
     font-size: 1.8rem;
     text-transform: capitalize;
     font-weight: $light-fontWeight;
+
+    @include medium-screen {
+      font-size: 1.3rem;
+    }
+  }
+
+  @include large-screen {
+    transform: translateX(-30%);
+  }
+
+  @include medium-screen {
+    transform: translateX(0%);
+  }
+}
+
+.quote {
+  position: absolute;
+
+  @include medium-screen {
+    font-size: 1.3rem;
   }
 }
 
@@ -81,12 +137,12 @@ body {
   position: relative;
 
   .quote-left {
-    position: absolute;
+    @extend .quote;
     top: 0;
     left: 0;
   }
   .quote-right {
-    position: absolute;
+    @extend .quote;
     bottom: 0;
     right: 0;
   }
@@ -96,6 +152,14 @@ body {
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: $thin-fontWeight;
+
+    @include medium-screen {
+      margin-top: 0rem;
+    }
+  }
+
+  @include medium-screen {
+    padding: 2rem 1.5rem;
   }
 }
 
@@ -109,6 +173,14 @@ body {
   font-weight: 100;
   top: 70%;
   outline: none;
+
+  @include medium-screen {
+    font-size: 1rem;
+  }
+  @include small-screen {
+    font-size: 0.5rem;
+    top: 90%;
+  }
 }
 
 .prev__btn {

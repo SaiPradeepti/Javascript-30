@@ -32,6 +32,15 @@ body {
   z-index: 0;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding-bottom: 3rem;
+  }
+}
+
 .container {
   z-index: 10;
 }
@@ -84,6 +93,43 @@ body {
   border-right: 20px solid #b3b3b3;
 }
 
+@media screen and (max-width: 1024px) {
+  .review .image__container {
+    height: 250px;
+    width: 250px;
+    right: 15%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .review .image__container {
+    height: 200px;
+    width: 200px;
+    top: 10%;
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .review .image__container {
+    left: 28%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .review {
+    height: 50vh;
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .review {
+    height: 50vh;
+    width: 400px;
+  }
+}
+
 .reviewer {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -100,11 +146,47 @@ body {
   font-weight: 400;
 }
 
+@media screen and (max-width: 768px) {
+  .reviewer .reviewer__name {
+    font-size: 1.5rem;
+  }
+}
+
 .reviewer .reviewer__title {
   text-align: center;
   font-size: 1.8rem;
   text-transform: capitalize;
   font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .reviewer .reviewer__title {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .reviewer {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reviewer {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+.quote, .review__quote .quote-left, .review__quote .quote-right {
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  .quote, .review__quote .quote-left, .review__quote .quote-right {
+    font-size: 1.3rem;
+  }
 }
 
 .review__quote {
@@ -113,13 +195,11 @@ body {
 }
 
 .review__quote .quote-left {
-  position: absolute;
   top: 0;
   left: 0;
 }
 
 .review__quote .quote-right {
-  position: absolute;
   bottom: 0;
   right: 0;
 }
@@ -129,6 +209,18 @@ body {
   margin-top: 1rem;
   font-size: 1.2rem;
   font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+  .review__quote .reviewer__quote {
+    margin-top: 0rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .review__quote {
+    padding: 2rem 1.5rem;
+  }
 }
 
 .btn, .prev__btn, .next__btn {
@@ -141,6 +233,19 @@ body {
   font-weight: 100;
   top: 70%;
   outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .btn, .prev__btn, .next__btn {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .btn, .prev__btn, .next__btn {
+    font-size: 0.5rem;
+    top: 90%;
+  }
 }
 
 .prev__btn {
