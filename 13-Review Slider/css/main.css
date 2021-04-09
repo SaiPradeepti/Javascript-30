@@ -107,15 +107,25 @@ body {
   font-weight: 300;
 }
 
+.review__quote {
+  padding: 4rem 2rem;
+  position: relative;
+}
+
 .review__quote .quote-left {
-  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .review__quote .quote-right {
-  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .review__quote .reviewer__quote {
+  text-align: center;
   margin-top: 1rem;
   font-size: 1.2rem;
   font-weight: 100;

@@ -77,14 +77,22 @@ body {
 }
 
 .review__quote {
+  padding: 4rem 2rem;
+  position: relative;
+
   .quote-left {
-    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .quote-right {
-    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 
   .reviewer__quote {
+    text-align: center;
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: $thin-fontWeight;
